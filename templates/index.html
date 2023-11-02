@@ -28,6 +28,26 @@
 
   <!-- Template Main CSS File -->
   <link href="static/assets/css/style.css" rel="stylesheet">
+  <style>
+    @keyframes fade-in-out {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Apply the animation to the text */
+        .animated-text {
+          
+            animation: fade-in-out 5s ease infinite;
+            perspective: 100px;
+        }
+  </style>
 
  
 </head>
@@ -88,14 +108,14 @@
     <div class="container" data-aos="fade-up">
 
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-        <div class="col-xl-6 col-lg-8">
-          <h1>Start Now Stop Never <span>.</span></h1>
-          <h2>Join GYM FOR YOU </h2>
+        <div>
+          <h1 style="font-weight: bold; font-size: 50px; color:orange;">Your Body is a <span style="color: red;"> Reflection</span> of Your <span style="color: red;">lifestyle</span></h1>
+          <span class="animated-text" style="font-size: 150px; background: -webkit-linear-gradient(150deg,orange,red); margin-bottom: 300px; -webkit-text-fill-color: transparent;-webkit-background-clip: text; ">GYM4YOU</span>
         </div>
       </div>
 
       <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
+        <!-- <div class="col-xl-2 col-md-4">
           <div class="icon-box">
             <i class="ri-store-line"></i>
             <h3><a href="">Biceps | Triceps</a></h3>
@@ -125,7 +145,7 @@
             <h3><a href="">Legs</a></h3>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </section><!-- End Hero -->

@@ -5,7 +5,21 @@ from django.contrib.auth import authenticate,login,logout
 from authapp.models import Contact,MembershipPlan,Trainer,Enrollment,Gallery,Attendance
 # Create your views here.
 def Home(request):
-    return render(request,"index.html")
+    if request.user.is_authenticated:
+        return render(request, 'userIsAuthenticated.html')
+    else:
+        return render(request, 'index.html')
+def userIsAuthenticated(request):
+    if request.user.is_authenticated:
+        return render(request, 'userIsAuthenticated.html')
+    else:
+        return render(request, 'index.html')
+def about(request):
+    return render(request,"about.html")
+def services(request):
+    return render(request,"services.html")
+def payment(request):
+    return render(request,"payment.html")
 
 def gallery(request):
     posts=Gallery.objects.all()

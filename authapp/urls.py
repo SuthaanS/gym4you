@@ -11,6 +11,10 @@ urlpatterns = [
     path('profile',views.profile,name="profile"),
     path('gallery',views.gallery,name="gallery"),
     path('attendance',views.attendance,name="attendance"),
+    path('about',views.about,name="about"),
+    path('services',views.services,name="services"),
+    path('payment',views.payment,name="payment"),
+    path('userIsAuthenticated',views.userIsAuthenticated,name="userIsAuthenticated"),
 
     
 ]
